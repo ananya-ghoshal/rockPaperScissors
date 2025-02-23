@@ -1,0 +1,117 @@
+.container {
+  background-color: #0a0f24;
+  color: white;
+  padding: 5rem;
+}
+.container h1 {
+  text-align: center;
+}
+.choices {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+}
+.choices button {
+  height: 10rem;
+  width: 10rem;
+  margin: 1rem;
+  aspect-ratio: 1/1;
+  background-color: white;
+  border-radius: 50%;
+  border: rgb(115, 221, 240) 20px solid;
+  box-shadow: inset 0 0 0 2px rgb(115, 221, 240);
+  cursor: pointer;
+}
+.options {
+  display: flex;
+  margin: auto;
+  width: 50%;
+}
+.options img {
+  height: 3rem;
+  width: 3rem;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  aspect-ratio: 1/1;
+}
+.optionsChosen {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  width: 50%;
+  justify-content: space-evenly;
+}
+.optionsChosen img {
+  border: #ffd700 10px solid;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: fadeIn 0.5s ease-in forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.result {
+  display: flex;
+}
+.result h2 {
+  margin: 1rem auto;
+}
+.score_card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-image: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%, #0ea5ea);
+  border-image-slice: 1;
+  padding: 1rem;
+  margin: auto;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 20%;
+}
+.scores {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.repeat_buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem auto;
+}
+.repeat_buttons button {
+  all: unset;
+  background-color: #e5e4e2;
+  color: black;
+  border-radius: 5px;
+  font-weight: bolder;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* CSS for mobile devices  */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+  .choices button {
+    height: 5rem;
+    width: 5rem;
+    border: rgb(115, 221, 240) 10px solid;
+  }
+  .choices img {
+    height: 2rem;
+    width: 2rem;
+  }
+  .options {
+    display: block;
+  }
+  .score_card {
+    width: 80%;
+  }
+}
